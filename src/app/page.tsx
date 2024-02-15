@@ -2,9 +2,9 @@ import roster from "../mocks/roster.json"
 
 export default function Home() {
   
-  const gameData = roster.games.map((game) => (
+  const gameData = roster.games.map((game, index) => (
     <>
-      <div className="py-2">
+      <div className="py-2" key={index}>
         <h1>{game.category}</h1>
         <h1>{game.name}</h1>
         <h1>{game.criticScore}</h1>
