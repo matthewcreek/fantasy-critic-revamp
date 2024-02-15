@@ -1,17 +1,25 @@
 import roster from "../mocks/roster.json"
 
 export default function Home() {
-  const gameArr = roster.games
-  console.log(roster.games[0].category)
+  
+  const gameData = roster.games.map((game) => (
+    <>
+      <div className="py-2">
+        <h1>{game.category}</h1>
+        <h1>{game.name}</h1>
+        <h1>{game.criticScore}</h1>
+        <h1>{game.points}</h1>
+      </div>
+    </>
+  ))
+
   return (
     <>
       <div>
         <h1>{roster.publisherName}</h1>
         <h1>{roster.userDisplayName}</h1>
-        <h1>{roster.games[0].category}</h1>
-        <h1>{roster.games[0].name}</h1>
-        <h1>{roster.games[0].criticScore}</h1>
-        <h1>{roster.games[0].points}</h1>
+        <h1>{`\$${roster.budget}`}</h1>
+        <h1 className="py-2">{gameData}</h1>
       </div>
     </>
   );
