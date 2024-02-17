@@ -4,12 +4,11 @@ export default function Home() {
   
   const gameData = roster.games.map((game, index) => (
     <>
-      <div className="py-2" key={index}>
-        <h1>{game.category}</h1>
-        <h1>{game.name}</h1>
-        <h1>{game.criticScore}</h1>
-        <h1>{game.points}</h1>
-      </div>
+      <tr>
+        <td>{`${game.category}${game.name}`}</td>
+        <td>{game.criticScore}</td>
+        <td>{game.points}</td>
+      </tr>
     </>
   ))
 
@@ -19,7 +18,14 @@ export default function Home() {
         <h1>{roster.publisherName}</h1>
         <h1>{roster.userDisplayName}</h1>
         <h1>{`\$${roster.budget}`}</h1>
-        <h1 className="py-2">{gameData}</h1>
+        <table>
+          <tr>
+            <th className="w-2/3">Game</th>
+            <th className="w-1/6">Critic</th>
+            <th className="w-1/6">Points</th>
+          </tr>
+          {gameData}
+        </table>
       </div>
     </>
   );
