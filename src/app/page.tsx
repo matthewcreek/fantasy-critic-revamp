@@ -7,7 +7,7 @@ export default function Home() {
     const gameData = user.games.map((game) => (
       <>
         <tr key={game.uniqueId}>
-         <td>{`${game.category}${game.name}`}</td>
+         <td>{`${game.category} - ${game.name}`}</td>
          <td>{game.criticScore}</td>
          <td>{game.points}</td>
        </tr>
