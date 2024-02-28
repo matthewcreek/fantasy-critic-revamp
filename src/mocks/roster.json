@@ -4,18 +4,21 @@
     "budget" : 100,
     "games" : [
         {
+            "uniqueId" : 0,
             "category" : "Reg",
             "name" : "Ghost of Tsushima",
             "criticScore" : 98,
             "points" : 36
         },
         {
+            "uniqueId" : 1,
             "category" : "NGF",
             "name" : "Helldivers II",
             "criticScore" : 83,
             "points" : 13
         },
         {
+            "uniqueId" : 2,
             "category" : "Reg",
             "name" : "Expeditions: A Mudrunner Game",
             "criticScore" : 0,
